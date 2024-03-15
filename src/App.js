@@ -122,14 +122,14 @@ const TodoApp = () => {
             <>
               <li
                 key={todo.id}
-                className="border-orange d-md-flex flex-column flex-md-row justify-content-between align-items-center d-none  w-100 "
+                className="border-orange d-md-flex flex-column flex-md-row justify-content-between align-items-center d-none  "
               >
                 <div className="me-3 custom-text-wrap">
                   <strong>{todo.title}</strong>
                   <p>{todo.description}</p>
                 </div>
                 {selectedTaskId === todo.id ? (
-                  <div>
+                  <div className="d-flex hstack">
                     <button
                       className="border-orange m-2"
                       onClick={() =>
@@ -166,7 +166,7 @@ const TodoApp = () => {
                   </div>
 
                   <button
-                    className="border-orange d-md-none w-25 h-25"
+                    className="border-orange d-md-none w-25"
                     onClick={() => removeTodo(todo.id)}
                   >
                     <CgClose style={{ color: "#FF8303" }} />
